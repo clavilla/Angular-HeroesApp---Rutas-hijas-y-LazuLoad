@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { ListadoComponent } from './pages/listado/listado.component';
 import { AgregarComponent } from './pages/agregar/agregar.component';
 import { BuscarComponent } from './pages/buscar/buscar.component';
 import { HeroeComponent } from './pages/heroe/heroe.component';
 import { HomeComponent } from './pages/home/home.component';
 
-const routes: Routes = [
+const rutas: Routes = [
   {
     path: '',
     component: HomeComponent,
@@ -28,7 +29,7 @@ const routes: Routes = [
         component: BuscarComponent
       },
       {
-        path: 'id',
+        path: ':id',
         component: HeroeComponent
       },
       {
@@ -41,7 +42,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forChild( routes )
+    RouterModule.forChild( rutas )
   ],
   exports: [
     RouterModule
